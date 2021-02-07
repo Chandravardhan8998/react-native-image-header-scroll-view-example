@@ -3,7 +3,10 @@ import { StyleSheet, Text, View, Image, Dimensions, StatusBar } from 'react-nati
 import * as Animatable from 'react-native-animatable';
 import { Header } from 'react-navigation';
 
-import HeaderImageScrollView, { TriggeringView } from 'react-native-image-header-scroll-view';
+import {
+  ImageHeaderScrollView,
+  TriggeringView,
+} from 'react-native-image-header-scroll-view';
 import tvShowContent from '../../assets/tvShowContent';
 
 const MIN_HEIGHT = Header.HEIGHT;
@@ -90,7 +93,7 @@ class TvShow extends Component {
     return (
       <View style={{ flex: 1 }}>
         <StatusBar barStyle="light-content" />
-        <HeaderImageScrollView
+        <ImageHeaderScrollView
           maxHeight={MAX_HEIGHT}
           minHeight={MIN_HEIGHT}
           maxOverlayOpacity={0.6}
@@ -138,7 +141,7 @@ class TvShow extends Component {
               ))}
             </View>
           </View>
-        </HeaderImageScrollView>
+        </ImageHeaderScrollView>
       </View>
     );
   }
